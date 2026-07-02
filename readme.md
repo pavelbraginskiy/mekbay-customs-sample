@@ -3,7 +3,8 @@ Sample units are from the *Operation Lancaster* BT fan project.
 
 How to do this for your own units:
 - Download the SVG exporter from this repo's releases
-- Create the export: In a termainal, navigate to the directory where you unpacked the exporter and run `.\bin\svgmassprinter.bat --skip-equipment --units "C:\folder\with\all\your\blk-mtf\files" -o "C:\where\you\want\the\export\to\go"`
+- Create the export: In a termainal, navigate to the directory where you unpacked the exporter and run the command `.\bin\svgmassprinter.bat --skip-equipment --units "C:\folder\with\all\your\blk-mtf\files" -o "C:\where\you\want\the\export\to\go"`
+  - `cd`ing into the bin directory and running `.\svgmassprinter.bat` doesn't work! Do it from the next directory up.
 - Figure out some way to host the resulting files. The easiest way is probably to put it in a github repo, I'll assume that's what you're doing from now on.
 - Create a *public* github repository.
 - Get the export you made into the repo. If you know git you can do it the normal way, otherwise use the Upload Files option from the github website:
