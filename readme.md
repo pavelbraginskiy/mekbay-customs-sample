@@ -13,6 +13,5 @@ How to do this for your own units:
 - Upload the entire folder `"C:\where\you\want\the\export\to\go"` from before. If you have >~100 units you might need to do this in multiple steps.
 - If you want to add more files in the future, repeat the above steps - it isn't enough to just add in the new units, the `.json` files will also have to be replaced to include all of the custom units you want in total.
 - Get URL to use for mekbay. For this repo, it's `https://raw.githubusercontent.com/pavelbraginskiy/mekbay-customs-sample/refs/heads/main`. You can work it out for your repo by viewing any file and clicking "Raw" to generate this url. Cut off the filename at the end - it should probably end in `/refs/heads/main`.
-- At time of writing, custom unit servers are only supported on next.mekbay.com, not yet on mekbay.com itself.
 - In advanced settings, add the URL for your repo to the list of custom unit servers.
 <img width="1039" height="369" alt="image" src="https://github.com/user-attachments/assets/23e69643-89dd-41a8-8fc0-8c2dffed23f5" />
