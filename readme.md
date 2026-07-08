@@ -27,7 +27,7 @@ By the end of this guide you'll have:
 You'll need:
 
 - **The SVG exporter.** Download it from this repository's [Releases](../../releases) page.
-- **Your unit files** — the `.blk` and `.mtf` files for the units you want to add.
+- **Your unit files** — the `.mtf` and/or `.blk` files for the units you want to add.
 - **A free GitHub account.** If you don't have one, sign up at [github.com](https://github.com/signup). This guide assumes you'll host your files on GitHub, since that's the easiest option.
 
 You do **not** need to know Git or use the command line for GitHub — the web-based upload option is covered below.
@@ -43,23 +43,25 @@ You do **not** need to know Git or use the command line for GitHub — the web-b
    cd "C:\Users\YourName\Downloads\svgexporter"
    ```
 
-3. Run the command below, replacing the example path with the folder that contains **all** of your `.blk`/`.mtf` files:
+3. Run the command below, replacing the example path with the folder that contains **all** of your `.mtf` and/or `.blk` files:
 
    ```
-   .\bin\svgmassprinter.bat --skip-equipment --units "C:\folder\with\all\your\blk-mtf\files"
+   .\bin\svgmassprinter.bat --skip-equipment --units "C:\folder\with\mtfs-blks" -o "C:\desired\output\location"
    ```
+
+   The `-o` part is optional: If left out, the default location is `../../svgexport` (creating a folder called `svgexport` two folders up). 
 
 > [!NOTE]
 > The `.bat` file is for Windows. On **Linux or macOS**, run `./bin/svgmassprinter` instead:
 >
 > ```
-> ./bin/svgmassprinter --skip-equipment --units "/path/to/your/blk-mtf/files"
+> ./bin/svgmassprinter --skip-equipment --units "/path/to/mtfs-blks" -o "/desired/output/location"
 > ```
 
 > [!WARNING]
-> Run this from the folder **above** `bin` (the one you unpacked into). Do **not** `cd` into the `bin` directory and run the exporter from there — that will not work.
+> Run this from the folder **above** `bin` (the one you unpacked into). Do **not** `cd` into the `bin` directory and run the exporter from there, that will not work.
 
-When it finishes, the exporter will have created your record sheets and data files in its output folder (for example, `C:\where\you\want\the\export\to\go`).
+When it finishes, the exporter will have created your record sheets and data files in its output folder.
 
 > [!NOTE]
 > **Prefer to host the files yourself?** Hosting on GitHub (Steps 2–5) is the most convenient option for most people, but the exported files can be served by any web server. For example, from your export folder you could run `npx http-server . --cors -p 8000`. If you go this route, just make sure the server sends CORS headers so Mekbay can read the files, then skip to Step 6 and use your server's base URL.
